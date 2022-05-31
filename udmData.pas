@@ -12,39 +12,6 @@ uses
 
 type
   TdmData = class(TDataModule)
-    cdsData: TClientDataSet;
-    cdsDataNAME: TStringField;
-    cdsDataDATE: TDateField;
-    cdsDataPHONE: TStringField;
-    cdsDataREASON: TStringField;
-    cdsDataHEALTH: TMemoField;
-    cdsDataRIGHT: TBooleanField;
-    cdsDataLEFT: TBooleanField;
-    cdsDataRIGHT_BALANCE: TBooleanField;
-    cdsDataLEFT_BALANCE: TBooleanField;
-    cdsDataRIGHT_NECK: TBooleanField;
-    cdsDataLEFT_NECK: TBooleanField;
-    cdsDataRIGHT_WEAK: TBooleanField;
-    cdsDataLEFT_WEAK: TBooleanField;
-    cdsDataRIGHT_STRONG: TBooleanField;
-    cdsDataLEFT_STRONG: TBooleanField;
-    cdsDataRIGHT_LEG_SHORT: TBooleanField;
-    cdsDataLEFT_LEG_SHORT: TBooleanField;
-    cdsDataLEFT_LEG_LARGE: TBooleanField;
-    cdsDataRIGHT_LEG_LARGE: TBooleanField;
-    cdsDataADVICE: TMemoField;
-    cdsDataLEFT_ZONE_G: TBooleanField;
-    cdsDataLEFT_ZONE_E: TBooleanField;
-    cdsDataLEFT_ZONE_N: TBooleanField;
-    cdsDataLEFT_ZONE_M: TBooleanField;
-    cdsDataLEFT_ZONE_C: TBooleanField;
-    cdsDataLEFT_ZONE_D: TBooleanField;
-    cdsDataRIGHT_ZONE_C: TBooleanField;
-    cdsDataRIGHT_ZONE_D: TBooleanField;
-    cdsDataRIGHT_ZONE_M: TBooleanField;
-    cdsDataRIGHT_ZONE_N: TBooleanField;
-    cdsDataRIGHT_ZONE_E: TBooleanField;
-    cdsDataRIGHT_ZONE_G: TBooleanField;
     fdbConnection: TFDConnection;
     tblClients: TFDTable;
     tblClientsCLIENT_ID: TIntegerField;
@@ -79,9 +46,9 @@ type
     tblClientsRIGHT_ZONE_N: TStringField;
     tblClientsRIGHT_ZONE_E: TStringField;
     tblClientsRIGHT_ZONE_G: TStringField;
-    tblClientsADVICE: TStringField;
+    tblClientsADVICE: TMemoField;
     procedure DataModuleCreate(Sender: TObject);
-    procedure cdsDataNewRecord(DataSet: TDataSet);
+    procedure tblClientsNewRecord(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -97,26 +64,23 @@ implementation
 
 {$R *.dfm}
 
-procedure TdmData.cdsDataNewRecord(DataSet: TDataSet);
+procedure TdmData.DataModuleCreate(Sender: TObject);
+begin
+  tblClients.Open;
+end;
+
+procedure TdmData.tblClientsNewRecord(DataSet: TDataSet);
 var
   Field: TField;
 begin
-  cdsDataDATE.Value:= Date;
-  for Field in cdsData.Fields do
+  DataSet.FieldByName('DATE').Value:= Date;
+  for Field in DataSet.Fields do
   begin
-     if Field.DataType in [ftBoolean] then
+     if Field.Size = 1 then
      begin
-       Field.Value:= False;
+       Field.Value:= 'F';
      end;
   end;
-end;
-
-procedure TdmData.DataModuleCreate(Sender: TObject);
-begin
-  if FileExists(cdsData.FileName) then
-    cdsData.Open
-  else
-    cdsData.CreateDataSet;
 end;
 
 end.

@@ -11,6 +11,7 @@ object frmMain: TfrmMain
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   DesignSize = (
     1015
     592)
@@ -53,6 +54,7 @@ object frmMain: TfrmMain
       Navigator.Buttons.Filter.Visible = False
       Navigator.Visible = True
       FilterBox.Visible = fvNever
+      ScrollbarAnnotations.CustomAnnotations = <>
       DataController.DataSource = dsData
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>
@@ -107,6 +109,8 @@ object frmMain: TfrmMain
       'su forma de pensar es imparcial'
     DataBinding.DataField = 'RIGHT'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 5
   end
   object LEF: TcxDBCheckBox
@@ -117,6 +121,8 @@ object frmMain: TfrmMain
       'ominante, su forma de pensar muy lineal'
     DataBinding.DataField = 'LEFT'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 6
   end
   object lblDOMINANT: TcxLabel
@@ -135,6 +141,8 @@ object frmMain: TfrmMain
     Caption = 'HEMISFERIO DERECHO'
     DataBinding.DataField = 'RIGHT_BALANCE'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 7
   end
   object LEFT_BALANCE: TcxDBCheckBox
@@ -143,6 +151,8 @@ object frmMain: TfrmMain
     Caption = 'HEMISFERIO IZQUIERDO'
     DataBinding.DataField = 'LEFT_BALANCE'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 8
   end
   object lblMUSCLE: TcxLabel
@@ -156,6 +166,8 @@ object frmMain: TfrmMain
     Caption = 'DOLOR CUELLO DERECHO'
     DataBinding.DataField = 'RIGHT_NECK'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 9
   end
   object LEFT_NECK: TcxDBCheckBox
@@ -164,6 +176,8 @@ object frmMain: TfrmMain
     Caption = 'HEMISFERIO DERECHO'
     DataBinding.DataField = 'LEFT_NECK'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 10
   end
   object lblSECTION: TcxLabel
@@ -177,6 +191,8 @@ object frmMain: TfrmMain
     Caption = 'MANO Y PIERNA DERECHA DEBIL'
     DataBinding.DataField = 'RIGHT_WEAK'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 11
   end
   object LEFT_WEAK: TcxDBCheckBox
@@ -185,6 +201,8 @@ object frmMain: TfrmMain
     Caption = 'MANO Y PIERNA IZQUIERDA DEBIL'
     DataBinding.DataField = 'LEFT_WEAK'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 12
   end
   object RIGHT_STRONG: TcxDBCheckBox
@@ -193,6 +211,8 @@ object frmMain: TfrmMain
     Caption = 'MANO Y PIERNA DERECHA FUERTE'
     DataBinding.DataField = 'RIGHT_STRONG'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 13
   end
   object LEFT_STRONG: TcxDBCheckBox
@@ -201,6 +221,8 @@ object frmMain: TfrmMain
     Caption = 'MANO Y PIERNA IZQUIERDA FUERTE'
     DataBinding.DataField = 'LEFT_STRONG'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 14
   end
   object lblALIGN: TcxLabel
@@ -242,6 +264,8 @@ object frmMain: TfrmMain
     Caption = 'PIE DERECHO CORTO'
     DataBinding.DataField = 'RIGHT_LEG_SHORT'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 15
   end
   object LEFT_LEG_SHORT: TcxDBCheckBox
@@ -250,6 +274,8 @@ object frmMain: TfrmMain
     Caption = 'PIE IZQUIERDO CORTO'
     DataBinding.DataField = 'LEFT_LEG_SHORT'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 16
   end
   object LEFT_LEG_LARGE: TcxDBCheckBox
@@ -258,6 +284,8 @@ object frmMain: TfrmMain
     Caption = 'PIE IZQUIERDO LARGO'
     DataBinding.DataField = 'LEFT_LEG_LARGE'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 17
   end
   object RIGHT_LEG_LARGE: TcxDBCheckBox
@@ -266,6 +294,8 @@ object frmMain: TfrmMain
     Caption = 'PIE DERECHO LARGO'
     DataBinding.DataField = 'RIGHT_LEG_LARGE'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 18
   end
   object lblADVICE: TcxLabel
@@ -302,6 +332,8 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'LEFT_ZONE_G'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 32
   end
   object LEFT_ZONE_E: TcxDBCheckBox
@@ -309,6 +341,8 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'LEFT_ZONE_E'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 33
   end
   object LEFT_ZONE_N: TcxDBCheckBox
@@ -316,6 +350,8 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'LEFT_ZONE_N'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 34
   end
   object LEFT_ZONE_M: TcxDBCheckBox
@@ -323,6 +359,8 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'LEFT_ZONE_M'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 35
   end
   object LEFT_ZONE_C: TcxDBCheckBox
@@ -330,6 +368,8 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'LEFT_ZONE_C'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 36
   end
   object LEFT_ZONE_D: TcxDBCheckBox
@@ -337,6 +377,8 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'LEFT_ZONE_D'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 37
   end
   object lblRIGHT_ZONE: TcxLabel
@@ -349,6 +391,8 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'RIGHT_ZONE_D'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 39
   end
   object RIGHT_ZONE_C: TcxDBCheckBox
@@ -356,6 +400,8 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'RIGHT_ZONE_C'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 40
   end
   object RIGHT_ZONE_M: TcxDBCheckBox
@@ -363,6 +409,8 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'RIGHT_ZONE_M'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 41
   end
   object RIGHT_ZONE_N: TcxDBCheckBox
@@ -370,6 +418,8 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'RIGHT_ZONE_N'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 42
   end
   object RIGHT_ZONE_E: TcxDBCheckBox
@@ -377,6 +427,8 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'RIGHT_ZONE_E'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 43
   end
   object RIGHT_ZONE_G: TcxDBCheckBox
@@ -384,10 +436,12 @@ object frmMain: TfrmMain
     Top = 362
     DataBinding.DataField = 'RIGHT_ZONE_G'
     DataBinding.DataSource = dsData
+    Properties.ValueChecked = 'T'
+    Properties.ValueUnchecked = 'F'
     TabOrder = 44
   end
   object dsData: TDataSource
-    DataSet = dmData.cdsData
+    DataSet = dmData.tblClients
     Left = 72
     Top = 16
   end

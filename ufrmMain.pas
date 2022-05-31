@@ -11,7 +11,7 @@ uses
   cxGridLevel, cxClasses, cxGridCustomView, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGrid, cxContainer, cxLabel, cxCheckBox,
   cxDBEdit, cxTextEdit, cxMaskEdit, cxDropDownEdit, cxCalendar, cxMemo,
-  Vcl.Menus, Vcl.StdCtrls, cxButtons;
+  Vcl.Menus, Vcl.StdCtrls, cxButtons, dxDateRanges, dxScrollbarAnnotations;
 
 type
   TfrmMain = class(TForm)
@@ -82,7 +82,7 @@ uses udmData;
 
 procedure TfrmMain.btnSaveClick(Sender: TObject);
 begin
-  dmData.cdsData.SaveToFile;
+  dmData.tblClients.Post;
 end;
 
 end.
